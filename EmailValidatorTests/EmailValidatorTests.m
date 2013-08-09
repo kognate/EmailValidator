@@ -59,10 +59,12 @@
     STAssertFalse([e validEmail:@"user@[IPv6:2001:db8:1ff::a0b:dbd0]"], @"good");
     
     
-    // less than 70 ms on my machine
-    /* for (int i = 0; i < 50000; i++) {
-        STAssertTrue([e validEmail:@"\"airwatchdemo\emc\"@airwatchdemo.com"], @"should be good");
-    }*/
+    // about 2 s on my machine
+    for (int i = 0; i < 100000; i++) {
+        STAssertTrue([e validEmail:@"\"very.(),:;<>[]\\\".VERY.\\\"very@\\n;\\\"very\\\".unusual\"@strange.example.com"], @"good");
+        STAssertFalse([e validEmail:@"user@[IPv6:2001:db8:1ff::a0b:dbd0]"], @"good");
+        STAssertTrue([e validEmail:@"niceandsimple@example.com"], @"good");
+    }
 }
 
 @end
