@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40D5B7D917B56C74001286A4 /* EmailValidator.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 40FD0E2F17B466F0001E8546 /* EmailValidator.h */; };
+		40D5B7DA17B56C74001286A4 /* libEmailValidator.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 40FD0E2717B466F0001E8546 /* libEmailValidator.a */; };
 		40FD0E2B17B466F0001E8546 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40FD0E2A17B466F0001E8546 /* Foundation.framework */; };
 		40FD0E3017B466F0001E8546 /* EmailValidator.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 40FD0E2F17B466F0001E8546 /* EmailValidator.h */; };
 		40FD0E3217B466F0001E8546 /* EmailValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FD0E3117B466F0001E8546 /* EmailValidator.m */; };
@@ -29,6 +31,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		40D5B7D817B56C37001286A4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "${SRCROOT}/libs/";
+			dstSubfolderSpec = 0;
+			files = (
+				40D5B7D917B56C74001286A4 /* EmailValidator.h in CopyFiles */,
+				40D5B7DA17B56C74001286A4 /* libEmailValidator.a in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		40FD0E2517B466F0001E8546 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -155,6 +168,7 @@
 				40FD0E2317B466F0001E8546 /* Sources */,
 				40FD0E2417B466F0001E8546 /* Frameworks */,
 				40FD0E2517B466F0001E8546 /* CopyFiles */,
+				40D5B7D817B56C37001286A4 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -405,6 +419,7 @@
 				40FD0E4E17B466F0001E8546 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		40FD0E4F17B466F0001E8546 /* Build configuration list for PBXNativeTarget "EmailValidatorTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +428,7 @@
 				40FD0E5117B466F0001E8546 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
