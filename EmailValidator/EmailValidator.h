@@ -8,6 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-@interface EmailValidator : NSObject
+typedef enum {
+    START,
+    IN_QUOTE,
+    BETWEEN,
+    USERNAME,
+    EMAIL_AT,
+    DOMAINNAME,
+    BAD_STATE,
+    TLD,
+    VALIDEMAIL
+} AllowedState;
 
+@interface EmailValidator : NSObject
+- (BOOL) validEmail:(NSString *) emailstr;
 @end
