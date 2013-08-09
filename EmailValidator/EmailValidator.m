@@ -30,12 +30,13 @@
     AllowedState current = START;
     int needsclosingbracket = 0;
     
-    NSCharacterSet *letters = [NSCharacterSet characterSetWithCharactersInString:@"abcdefghijklmnopqrstuvwxyz0123456789-"];
+    NSCharacterSet *letters = [NSCharacterSet characterSetWithCharactersInString:@"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-"];
     
     NSMutableCharacterSet *usernameallowed = [[NSMutableCharacterSet alloc] init];
     [usernameallowed formUnionWithCharacterSet:letters];
     [usernameallowed formUnionWithCharacterSet:[NSCharacterSet symbolCharacterSet]];
     [usernameallowed formUnionWithCharacterSet:[NSCharacterSet punctuationCharacterSet]];
+    [usernameallowed formUnionWithCharacterSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     
     NSCharacterSet *notletters = [letters invertedSet];
     NSCharacterSet *notalpha = [usernameallowed invertedSet];
@@ -117,7 +118,7 @@
         }
         if (dotidx > 0) {
             NSRange r = NSMakeRange(dotidx, [emailstr length] - dotidx);
-            NSString *tldcheck = [[emailstr substringWithRange:r] stringByTrimmingCharactersInSet:rbracket];
+            NSString *tldcheck = [[[emailstr substringWithRange:r] stringByTrimmingCharactersInSet:rbracket] lowercaseString];
             if (current == DOMAINNAME && [self isTLD:tldcheck]) {
                 if (needsclosingbracket == 1) {
                     current = TLD;
