@@ -7,6 +7,8 @@ Pod::Spec.new do |s|
   s.author       = { "Joshua Smith" => "kognate@gmail.com" }
   s.source       = { :git => "https://github.com/kognate/EmailValidator.git", :tag => "0.0.1" }
   s.platform     = :ios, '5.0'
-  s.source_files = 'libs', 'libs/**/*.{a,h,m}'
+  s.source_files = 'libs/EmailValidator.h'
+  s.preserve_paths = 'libs/libEmailValidator.a'
+  s.library = 'EmailValidator'
   s.requires_arc = true
 end
