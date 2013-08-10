@@ -21,3 +21,5 @@ iOS apparently doesn't ship flex libraries (they're there for Mac OS).  I was wo
 on a really nice bison grammer for this and then I hit that roadblock.  So I thought,
 "Hey, this yak _needs_ shaving."
 
+
+[![Build Status](https://travis-ci.org/kognate/EmailValidator.png)](https://travis-ci.org/kognate/EmailValidator)
